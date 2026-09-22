@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Codefest">
         <activity
+            android:name=".ViewStudentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateStudentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditStudentActivity"
+            android:exported="false" />
+        <activity
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity

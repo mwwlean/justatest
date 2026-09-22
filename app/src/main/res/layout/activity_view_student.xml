@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    android:padding="24dp">
+
+
+    <!-- Page Title -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Student Information"
+        android:textSize="28sp"
+        android:textStyle="bold"
+
+        android:layout_marginBottom="32dp" />
+
+
+    <!-- Student ID Label -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Student ID"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+
+    <!-- Student ID -->
+
+    <TextView
+        android:id="@+id/tvViewId"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:textSize="18sp"
+
+        android:layout_marginBottom="24dp" />
+
+
+    <!-- Name Label -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Name"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+
+    <!-- Name -->
+
+    <TextView
+        android:id="@+id/tvViewName"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:textSize="18sp"
+
+        android:layout_marginBottom="24dp" />
+
+
+    <!-- Course Label -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Course"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+
+    <!-- Course -->
+
+    <TextView
+        android:id="@+id/tvViewCourse"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:textSize="18sp"
+
+        android:layout_marginBottom="32dp" />
+
+
+    <!-- Back Button -->
+
+    <Button
+        android:id="@+id/btnBack"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Back" />
+
+</LinearLayout>
