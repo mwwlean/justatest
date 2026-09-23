@@ -114,6 +114,42 @@ public class StudentManager {
         return filtered;
     }
 
+    2. Convert the String into an actual date
+Use DateTimeFormatter :
+DateTimeFormatter formatter =
+DateTimeFormatter.ofPattern("MMM dd, yyyy"
+, Locale.ENGLISH);
+LocalDate deadline =
+LocalDate.parse(deadlineText, formatter);
+Now:
+"Sep 30, 2026"
+↓ parse
+LocalDate
+↓
+2026-09-30
+You can now actually compare it.
+3. Get today's date
+LocalDate today = LocalDate.now();
+For example:
+today = 2026-09-22
+deadline = 2026-09-30
+    
+
+ // 5. Real-time search filtering (ZERO adapter needed)
+        searchNotesEditText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence queryText, int start, int before, int count) {
+                // When typing in search, filter and redraw the container
+                List<notes> filteredNotes = notesManager.searchNotes(queryText.toString());
+                displayNotes(filteredNotes);
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {}
+        });
 
 
 }
