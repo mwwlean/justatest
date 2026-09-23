@@ -94,4 +94,26 @@ public class StudentManager {
         // Student was not found
         return false;
     }
+
+    // --- SEARCH / FILTER is for the note---
+    public List<notes> searchNotes(String query) {
+        String cleanQuery = query.trim().toLowerCase();
+
+        // If search is blank, return everything
+        if (cleanQuery.isEmpty()) {
+            return getAllNotes();
+        }
+
+        ArrayList<notes> filtered = new ArrayList<>();
+        for (notes note : noteList) {
+            // Checks if the note text contains the search query
+            if (note.getTxt().toLowerCase().contains(cleanQuery)) {
+                filtered.add(note);
+            }
+        }
+        return filtered;
+    }
+
+
+
 }
